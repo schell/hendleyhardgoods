@@ -4,49 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>$title$</title>
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link 
+     rel="stylesheet" 
+     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+     integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+     crossorigin="anonymous">
+    <!-- Minified jQuery JavaScript -->
+    <script 
+     src="https://code.jquery.com/jquery-2.2.3.min.js"
+     integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
+     crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified Bootstrap JavaScript -->
+    <script 
+     src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+     integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+     crossorigin="anonymous"></script>
+    <link 
+     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+     rel="stylesheet">
+    <link 
+     ref='https://fonts.googleapis.com/css?family=Source+Sans+Pro'
+     rel='stylesheet' 
+     type='text/css'>
     <link href="/css/site.css" rel="stylesheet">
   </head>
   <body>
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container nav-container">
-        <a class="navbar-brand"href="/">
-          <img class="logo" src="/img/cropped-hendleyhardgoods_header_21.png" />
-        </a>
-        <div class="pull-right">
-          <ul class="nav navbar-nav navbar-right list-inline">
-            <li>
-              <a href="/story">
-                <span>story</span>
-              </a>
-            </li>
-            <li>
-            <a href="/past-work">
-                <span>stock</span>
-              </a>
-            </li>
-            <li>
-              <a href="/connect">
-                <span>connect</span>
-              </a>
-            </li>
-            <li>
-              <a href="/shop">
-                <span>shop</span>
-              </a>
-            </li>
-            <li>
-              <a href="/news">
-                <span>news</span>
-              </a>
-            </li>
-            <li>
-              <a href="/wear-and-care">
-                <span>care</span>
-              </a>
-            </li>
-          </ul>
+        <div class="navbar-header">
+          <button type="button" 
+                  class="navbar-toggle collapsed" 
+                  data-toggle="collapse"
+                  data-target="#navbar-links" 
+                  aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">
+            <img class="logo" 
+                 src="/img/cropped-hendleyhardgoods_header_21.png" />
+          </a>
+        </div>
+        <div class="collapse navbar-collapse"
+             id="navbar-links">
+          <div class="pull-right">
+            <ul class="nav navbar-nav navbar-right list-inline">
+              <li>
+                <a href="/story">
+                  <span>story</span>
+                </a>
+              </li>
+              <li>
+              <a href="/stock">
+                  <span>stock</span>
+                </a>
+              </li>
+              <li>
+                <a href="/connect">
+                  <span>connect</span>
+                </a>
+              </li>
+              <li>
+                <a href="/shop">
+                  <span>shop</span>
+                </a>
+              </li>
+              <li>
+                <a href="/news">
+                  <span>news</span>
+                </a>
+              </li>
+              <li>
+                <a href="/wear-and-care">
+                  <span>care</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -58,7 +95,28 @@
       </div>
       <div class="row footer">
         <div class="content col-md-12">
+          <ul class="list-inline text-center">
+            <li>
+              <a href="https://instagram.com/hendleyhardgoods" class="social">
+                <i class="fa fa-instagram fa-2x"></i>
+              </a> 
+            </li>
+            <li>
+              <a href="http://www.facebook.com/hendleysantarosa" class="social">
+                <i class="fa fa-facebook fa-2x"></i>
+              </a> 
+            </li>
+            <li>
+              <a href="https://www.pinterest.com/hendleygoods/" class="social">
+                <i class="fa fa-pinterest fa-2x"></i>
+              </a> 
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </body>
 </html>
+<!-- This site's templates were lovingly hand-crafted by Schell Scivally.
+     The content is managed and and generated by milkshake.
+-->
