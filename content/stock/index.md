@@ -3,15 +3,11 @@ title: stock
 ---
 ![](/img/stock-header.jpg){.img-responsive .hero}
 
-stock
+stock 
 =====
-![](/img/stock-1.jpg){.img-left .clearfix}
-
-![](/img/stock-2.jpg){.img-left .clearfix}
-
-![](/img/stock-3.jpg){.img-left .clearfix}
-
-### Blah!
+![](/img/stock-1.jpg){.img-right}
+![](/img/stock-2.jpg){.img-right}
+![](/img/stock-3.jpg){.img-right}
 
 Hendley hard goods can be found at:
 
@@ -31,22 +27,21 @@ Hendley hard goods can be found at:
 
 [Undercover Baking](http://www.criminalbaking.com/)
 
- 
+![](/img/stock-4.jpg){.img-right}
 
-Clients:Hendley_Aug2014_MG_2739-X2
+clients
+=======
 
-Marla Bakery
+[Marla Bakery](http://www.marlabakery.com)
 
-Point Reyes FarmsteHendley_Aug2014_MG_2802-X3ad Cheese Company
+[Point Reyes Farmstead Cheese Company](https://www.pointreyescheese.com)
 
- 
+![](/img/stock-5.jpg){.img-responsive}
 
- 
+I offer my pieces for rental! I charge based on how long, what purpose you are 
+using my work, and whether I will be credited or have access to photographs. 
+Please contact me and let me know what you are working on.
 
-I offer my pieces for rental! I charge based on how long, what purpose you are using my work, and whether I will be credited or have access to photographs. Please contact me and let me know what you are working on.
+![](/img/stock-6.jpg){.img-responsive}
 
-Hendley_March15_onWhite_MG_0701_RTLYRS-XL
-
- 
-
-Images by Sara Sanger
+Images by [Sara Sanger](http://sarasanger.com)
