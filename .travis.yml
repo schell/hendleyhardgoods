@@ -11,8 +11,8 @@ before_install:
   --strip-components=1 -C ~/.local/bin '*/stack'
 script:
 - stack --no-terminal --install-ghc build
-- stack exec zyghost-com clean
-- stack exec zyghost-com build
+- stack exec hendleyhardgoods clean
+- stack exec hendleyhardgoods build
 cache:
   directories:
   - "$HOME/.stack"
@@ -27,4 +27,4 @@ deploy:
   region: us-west-1
   skip_cleanup: true
   on:
-    repo: schell/zyghost-com
+    repo: schell/hendleyhardgoods
