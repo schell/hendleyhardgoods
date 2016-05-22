@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html><head><title>$title$</title></head>
   <body>
-    $if(has-toc)$
-      <div class="col-md-3" id="toc">
-        <h2>Table of Contents, yo</h2>
-          $toc$
-        </div>
-      <div class="col-md-9">$body$</div>
-    $else$
+    <div class="col-md-3" id="toc">
+      <h2>Table of Contents, yo</h2>
+        $toc$
+      </div>
+    </div>
+    <pre>$theme$</pre>
+    <pre>$title$</pre>
+    <pre>$author$</pre>
+    <pre>$date$</pre>
     $body$
-    $endif$
   </body></html>

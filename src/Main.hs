@@ -1,37 +1,24 @@
 {-# LANGUAGE FlexibleContexts #-}
 {-# LANGUAGE LambdaCase #-}
+{-# LANGUAGE OverloadedStrings #-}
 {-# OPTIONS_GHC -fno-warn-orphans #-}
 module Main where
 
 import Development.Shake
 import Development.Shake.FilePath
-import Data.Attoparsec.Text
 import qualified Data.Text as T
 import Data.Text (Text)
-import Data.Function (on)
-import Data.List (sortBy, nub)
 import Data.Yaml hiding (Parser)
-import Data.Char (toLower)
-import Data.Maybe (isJust, fromMaybe)
-import Data.ByteString.Char8 (ByteString)
-import qualified Data.ByteString.Char8 as B
+import Data.Monoid ((<>))
+import qualified Data.HashMap.Strict as HM
+import qualified Data.Map.Lazy as M
 import qualified Data.Set as S
 import Control.Monad
-import Control.Applicative ((<|>))
 import Text.Pandoc
-import Text.Pandoc.Shared (stringify)
+import Text.Pandoc.Shared
+import Text.Pandoc.XML
 import Text.Pandoc.Readers.Markdown
-import Text.Blaze.Renderer.Utf8
 import System.Exit
-import System.Process
-import Lucid
-import Lucid.Base
-
-import Data.Conduit.Binary (sinkFile) -- Exported from the package conduit-extra
-import Network.HTTP.Conduit
-import qualified Data.Conduit as C
-import Control.Monad.Trans.Resource (runResourceT)
-
 --------------------------------------------------------------------------------
 -- Pandoc
 --------------------------------------------------------------------------------
@@ -40,44 +27,49 @@ myPandocExtensions =
   S.fromList [ Ext_link_attributes
              , Ext_mmd_link_attributes
              ]
+
+stringifyHTML :: MetaValue -> Value
+stringifyHTML = String . T.pack . escapeStringForXML . stringify
 --------------------------------------------------------------------------------
 -- Page
 --------------------------------------------------------------------------------
 data Page = Page { pagePath     :: FilePath
-                 , pageTemplate :: String
+                 , pageTemplate :: Text
                  , pagePandoc   :: Pandoc
                  }
 
-renderPage :: Page -> String
-renderPage (Page _ template pandoc) =
-  let optsPlain = def{ writerExtensions = S.union myPandocExtensions $
-                                            writerExtensions def
-                     , writerHighlight = True
-                     , writerHtml5 = True
-                     }
-      optsTOC = optsPlain { writerTableOfContents = True
-                          , writerTemplate = template --tocTmpl
-                          , writerStandalone = True
-                          }
-      opts = optsTOC
-      --tocTmpl = unwords ["<div class=\"col-md-3\" id=\"toc\">"
-      --                  ,"<h2>Table of Contents</h2>"
-      --                  ,"$toc$"
-      --                  ,"</div>"
-      --                  ,"<div class=\"col-md-9\">$body$</div>"
-      --                  ]
-  in writeHtmlString opts pandoc --return (const $ renderMarkupBuilder blazehtml, ())
+renderTemplateTextWith :: Text -> Value -> String
+renderTemplateTextWith template val =
+  either (const $ T.unpack backupTemplate)
+         (`renderTemplate` val)
+         $ compileTemplate template
 
---instance ToHtml Pandoc where
---  toHtml = pandocHtml
---  toHtmlRaw = toHtml
+renderPage :: Page -> Object -> String
+renderPage (Page _ template pandoc@(Pandoc meta _)) vars =
+  let optsPlain  = def{ writerExtensions = S.union myPandocExtensions $
+                                             writerExtensions def
+                      , writerHighlight = True
+                      , writerHtml5 = True
+                      }
+      opts = optsPlain{ writerStandalone = False
+                      , writerTableOfContents = True
+                      }
+      body = String $ T.pack $ writeHtmlString opts pandoc
+      toc = String $ T.pack $ writeHtmlString opts{writerTemplate = "$toc$"
+                                                  ,writerStandalone = True
+                                                  } pandoc
+      bodyTOCVars = HM.fromList [("body", body), ("toc", toc)]
+      metaVars = M.foldlWithKey (\acc k v -> HM.insert (T.pack k) (stringifyHTML v) acc) HM.empty $ unMeta meta
+      allVars = vars <> metaVars <> bodyTOCVars
+      obj = Object allVars
+  in renderTemplateTextWith template obj
 --------------------------------------------------------------------------------
 -- Caches
 --------------------------------------------------------------------------------
 type GetMarkdown = FilePath -> Action Page
-type GetTemplate = FilePath -> Action String
+type GetTemplate = FilePath -> Action Text
 
-backupTemplate :: String
+backupTemplate :: Text
 backupTemplate =
   "<html><head><title>$title$</title></head><body>$body$</body></html>"
 
@@ -86,7 +78,7 @@ makeGetTemplate = newCache $ \file -> do
   liftIO $ putStrLn $ "Looking for template: " ++ file
   doesFileExist file >>= \case
     False -> return backupTemplate
-    True -> readFile' file
+    True -> T.pack <$> readFile' file
 
 makeGetMarkdown :: GetTemplate -> Rules GetMarkdown
 makeGetMarkdown getTemplate = newCache $ \file -> do
@@ -96,7 +88,7 @@ makeGetMarkdown getTemplate = newCache $ \file -> do
                   , readerSmart = True
                   }
   (pandoc@(Pandoc meta _),ws) <- (reader <$> readFile' file) >>= \case
-    Left err -> liftIO $ print err >> exitFailure
+    Left er -> liftIO $ print er >> exitFailure
     Right p  -> return p
   unless (null ws) $ liftIO $ putStrLn $ unlines $ "WARNINGS: ":ws
 
@@ -109,7 +101,6 @@ makeGetMarkdown getTemplate = newCache $ \file -> do
                   , pagePandoc = pandoc
                   }
   return page
-
 
 milkShake :: Rules () -> IO ()
 milkShake = shakeArgs shakeOptions{shakeFiles="build/"}
@@ -150,4 +141,4 @@ main = milkShake $ do
       liftIO $ putStrLn $ "writing: " ++ out
       let md = "content" </> dropDirectory1 out -<.> "md"
       page <- getMarkdown md
-      writeFile' out $ renderPage page
+      writeFile' out $ renderPage page HM.empty

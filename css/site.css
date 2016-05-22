@@ -1,6 +1,11 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
 }
+
+iframe {
+  border: none;
+}
+
 /* Responsive youtubery */
 .video-container { 
   margin-top: 4em;

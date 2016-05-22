@@ -1,5 +1,5 @@
 ---
-title: stock
+title: hendley - stock
 ---
 ![](/img/stock-header.jpg){.img-responsive .hero}
 
