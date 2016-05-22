@@ -24,5 +24,7 @@ deploy:
   bucket: hendleyhardgoods.com
   local-dir: build
   acl: public_read
+  region: us-west-1
+  skip_cleanup: true
   on:
     repo: schell/hendleyhardgoods
