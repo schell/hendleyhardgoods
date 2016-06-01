@@ -32,8 +32,6 @@ All of my boards are made in my studio on Hendley Street in Santa Rosa,
 California where food, art, and American folk magic inspire me.
 
 I would love to make something for you from wood salvaged from your family 
-home or fallen backyard tree. [Contact me][contact]!
+home or fallen backyard tree. [Contact me](/connect)!
 
 Gwen
-
-[contact]: https://hendleyhardgoods.com/connect/

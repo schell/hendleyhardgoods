@@ -14,3 +14,4 @@
   commands:
   - stack exec hendleyhardgoods clean
   - stack exec hendleyhardgoods build
+  - stack exec hendleyhardgoods yaml:content/connect/index.md

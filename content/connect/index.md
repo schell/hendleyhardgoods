@@ -6,6 +6,13 @@ title: hendley - connect
 
 connect
 =======
+
+Join the mailing list
+---------------------
+[Here you can sign up for the Hendley Hardgoods mailing list.](http://eepurl.com/bNaxzT){target=_blank}.
+
+Email me
+--------
 Please do not hesitate to contact me with questions and feedback. I want you 
 to be happy with your purchase as I do not offer returns.
 
@@ -14,6 +21,6 @@ for you from wood salvaged from your family home or fallen backyard tree.
 
 Let’s talk!
 
-Gwen
+[gwen@hendleyhardgoods.com](mailto:gwen@hendleyhardgoods.com)
 
 Get in touch

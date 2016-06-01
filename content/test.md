@@ -5,6 +5,8 @@ author: Schell
 theme: raw
 ---
 
+$toc$
+
 Here is the h1
 ============== 
 Some text right here. Some text right here. Some text right here. Some text right here. Some text right here. Some text right here. Some text right here. Some text right here. Some text right here. Some text right here. Some text right here. Some text right here. Some text right here. Some text right here. Some text right here. Some text right here. Some text right here. Some text right here. Some text right here. Some text right here. Some text right here. Some text right here. Some text right here. Some text right here. Some text right here. Some text right here. Some text right here. 

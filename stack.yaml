@@ -1,4 +1,5 @@
 flags: {}
 packages:
 - '.'
+- '../milkshake'
 resolver: lts-5.2

@@ -62,34 +62,7 @@ executable hendleyhardgoods
 
   -- Other library packages from which modules are imported.
   build-depends:   base >=4.8 && <4.9
-                 , shake 
-                 , time 
-                 , lucid 
-                 , filepath 
-                 , pandoc 
-                 , process 
-                 , transformers 
-                 , text 
-                 , bytestring 
-                 , blaze-html 
-                 , blaze-markup 
-                 , blaze-builder 
-                 , containers 
-                 , yaml 
-                 , aeson 
-                 , http-client 
-                 , http-conduit 
-                 , conduit 
-                 , conduit-extra 
-                 , resourcet 
-                 , attoparsec 
-                 , unordered-containers 
-                 , mtl
-                 , pandoc-types
-                 , texmath
-                 , HTTP
-                 , network-uri
-                 , xml
+                 , milkshake
 
   -- Directories containing source files.
   hs-source-dirs:      src
