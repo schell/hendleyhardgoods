@@ -1,5 +1,8 @@
 flags: {}
 packages:
 - '.'
-- '../milkshake'
-resolver: lts-5.2
+- location:
+    git: git@github.com:schell/milkshake.git 
+    commit: d29a018c30a9908a1073d94d877d04aa11d86582
+  extra-dep: true
+resolver: lts-6.1
