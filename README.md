@@ -8,3 +8,5 @@ other helpful links
 [build status](https://travis-ci.org/schell/hendleyhardgoods)
 
 [the site](http://hendleyhardgoods.com)
+
+[markdown format](http://daringfireball.net/projects/markdown/syntax)
