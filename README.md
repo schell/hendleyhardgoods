@@ -6,3 +6,5 @@ using the static site generator, [milkshake](https://github.com/schell/milkshake
 other helpful links
 -------------------
 [build status](https://travis-ci.org/schell/hendleyhardgoods)
+
+[the site](http://hendleyhardgoods.com)
