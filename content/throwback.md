@@ -7,4 +7,6 @@ This file is a webpage. It contains an image that is a throwback to schell aroun
 
 ![](/img/IMG_0405.JPG){.img-responsive .hero}
 
+![leo](/img/leo-wtf.png)
+
 THE END
