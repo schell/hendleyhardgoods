@@ -7,8 +7,6 @@ title: hendley - connect
 connect
 =======
 
-Join the mailing list
----------------------
 [Keep up with what I'm doing, where I'll be, and deep thoughts I might have.](http://eepurl.com/bNaxzT){target=_blank}.
 
 Email me
