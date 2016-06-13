@@ -14,7 +14,7 @@ Feeding people is an essential part of my work. I am in service to the home cook
 The objects I craft are intended for use, for care, and to be with you for a lifetime. They are intended to be shared with your family and friends, to be gathered around, to connect over.
 
 I built this table with wood salvaged from a house fire. My great-grandfather had built the house on the Russian River in the 50's. When it burned down several years ago I was heart broken. I was able to bring some part of it back to life with these pieces. I eat at this table, and my great grandfather is there. The house he built has a new life.
-![](/img/Hendley_May2016_MG_1722_RT-XL.jpg)
+![](/img/Hendley_May2016_MG_1722_RT-XL.jpg){.img-right}
 
 
 Everything I make has a past. The wood is salvaged or comes from a fallen tree.
