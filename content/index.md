@@ -2,11 +2,10 @@
 title: hendley - Hendley Hard Goods Sonoma County Woordwork
 ---
 
-![](/img/index-header.jpg){.img-responsive .hero}
+![](/img/Hendley_May2016_MG_1889-XL.jpg){.img-responsive .hero}
 
-Hendley Hard Goods creates one-of-a-kind, handmade cutting and serving boards 
-from salvaged wood inspired by the idea of turning a mundane object into an 
-artful, cherished heirloom.
+Hendley is Gwen Gunheim, a wood worker, artist, and necromancer based in Sonoma County. She crafts everyday heirlooms from salvaged or fallen wood in service to food, art, and thought.
+
 
 <div class="video-container">
    <iframe src="https://videopress.com/embed/YjucsueS" 
