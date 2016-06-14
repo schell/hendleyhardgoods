@@ -9,7 +9,7 @@ story
 ![](/img/Hendley_May2016_MG_1769_RT-XL.jpg){.img-right}
 
 
-This is my grandma’s cutting board. One side is pocked from pounding abalone, the other scared from hundreds of meals. Now it lives in my kitchen, an heirloom.
+This is my grandma’s cutting board. One side is pocked from pounding abalone, the other scarred from hundreds of meals. Now it lives in my kitchen, an heirloom.
 Feeding people is an essential part of my work. I am in service to the home cook and the restaurateur and everyone who values a home-cooked meal.
 The objects I craft are intended for use, for care, and to be with you for a lifetime. They are intended to be shared with your family and friends, to be gathered around, to connect over.
 
