@@ -12,6 +12,8 @@ Hendley hard goods can be found at:
 
 [14feet](https://squareup.com/market/14feet)
 
+[California Sister](http://www.californiasister.com/)
+
 [Edition Local](http://www.editionlocal.com/)  
 
 [Foggy Notion](http://www.foggy-notion.com/)
@@ -24,10 +26,14 @@ Hendley hard goods can be found at:
 
 [North South East West](http://www.nosoeawe.com/)
 
+[Taylor Stitch](https://www.taylorstitch.com/)
+
 [Undercover Baking](http://www.criminalbaking.com/)
 
 clients
 =======
+
+[Drifter Pizza](http://www.drifterpizza.com/)
 
 [Marla Bakery](http://www.marlabakery.com)
 
