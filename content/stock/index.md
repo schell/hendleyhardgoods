@@ -20,6 +20,8 @@ Hendley hard goods can be found at:
 
 [Frances May](http://www.francesmay.com/)
 
+[Homestead Apothecary](http://homesteadapothecary.com/)
+
 [Inspired Spaces](http://inspiredspacesdesign.com/)
 
 [Moustache Baked Goods](http://moustachebakedgoods.com/)
