@@ -1,7 +1,7 @@
 ---
 title: hendley - stock
 ---
-![](/img/Hendley_May2016_MG_1778_RT-X2.jpg){.img-responsive .hero}
+![](/img/Hendley__MG_8306.jpg){.img-responsive .hero}
 
 stock 
 =====
